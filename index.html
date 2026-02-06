@@ -2,86 +2,84 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Voor Mien 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wil je mijn Valentijn zijn?</title>
   <style>
     body {
-      background-color: #ffe6e6;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #001f4d; /* donkerblauw */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
       text-align: center;
-      padding-top: 50px;
-      color: #b30059;
     }
-
     h1 {
-      font-size: 3em;
+      font-size: 3rem;
       margin-bottom: 20px;
+      color: #4fc3f7; /* lichtblauw */
+      animation: pulse 2s infinite;
     }
-
-    p {
-      font-size: 1.5em;
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
-
-    #heart {
-      font-size: 100px;
-      color: #ff1a75;
-      animation: beat 1s infinite;
-      cursor: pointer;
-      margin-top: 30px;
+    #valentineMessage {
+      display: none;
+      max-width: 600px;
+      margin-top: 20px;
+      background: rgba(0, 0, 50, 0.8);
+      padding: 20px;
+      border-radius: 10px;
     }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
     }
-
     button {
-      margin-top: 40px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      background-color: #ff66b3;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
       border: none;
-      border-radius: 12px;
-      color: white;
+      border-radius: 5px;
+      background-color: #4fc3f7;
+      color: #001f4d;
       cursor: pointer;
       transition: 0.3s;
     }
-
     button:hover {
-      background-color: #ff3385;
-    }
-
-    #message {
-      display: none;
-      margin-top: 30px;
-      font-size: 1.8em;
-      color: #800040;
+      transform: scale(1.1);
+      background-color: #82ccff;
     }
   </style>
 </head>
 <body>
-  <h1>Wil je mijn Valentijn zijn? 💌</h1>
-  <p>Klik op het hartje of de knop hieronder om mijn bericht te zien!</p>
-  
-  <div id="heart">❤️</div>
-  
-  <button id="showMessage">Toon mijn boodschap</button>
-  
-  <div id="message">
-    Van Baco's in de stad naar mijn favoriete valentijn 🥰
+  <h1>Wil je mijn Valentijn zijn? 💙</h1>
+  <button onclick="showMessage()">Klik hier om het te zien!</button>
+
+  <div id="valentineMessage">
+    <img src="8a74a356-d8a3-4ae0-8feb-c0a1babfeea8.png" alt="Ons foto">
+    <p>
+      Jooo driller,<br><br>
+      Nog maar een paar weken, je bent er bijna. Ik weet dat het aftellen nu echt begonnen is en dat je niet kunt wachten om weer naar huis te gaan en eerlijk, ik ook niet, want dat betekent eindelijk weer een baco en stadje samen.<br><br>
+      Je hebt daar in Oeganda iets gedaan wat niet iedereen durft: je bent uit je comfortzone gestapt, hebt nieuwe dingen geleerd en jezelf echt uitgedaagd. Dat is iets om trots op te zijn. Ik ben echt trots op je.<br><br>
+      Hou nog even vol, geniet van de laatste momenten daar, en onthoud: zodra je terug bent, halen we alle Baco in die je gemist hebt.<br><br>
+      Ohja en je wordt tering hard ingemaakt op FIFA als je terug bent 😎
+    </p>
   </div>
 
   <script>
-    const heart = document.getElementById('heart');
-    const button = document.getElementById('showMessage');
-    const message = document.getElementById('message');
-
-    heart.addEventListener('click', () => {
-      message.style.display = 'block';
-    });
-
-    button.addEventListener('click', () => {
-      message.style.display = 'block';
-    });
+    function showMessage() {
+      document.getElementById('valentineMessage').style.display = 'block';
+    }
   </script>
 </body>
 </html>
+
