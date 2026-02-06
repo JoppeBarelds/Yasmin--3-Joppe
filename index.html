@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Voor Mien 💖</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      color: #b30059;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    #heart {
+      font-size: 100px;
+      color: #ff1a75;
+      animation: beat 1s infinite;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff66b3;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    #message {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.8em;
+      color: #800040;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wil je mijn Valentijn zijn? 💌</h1>
+  <p>Klik op het hartje of de knop hieronder om mijn bericht te zien!</p>
+  
+  <div id="heart">❤️</div>
+  
+  <button id="showMessage">Toon mijn boodschap</button>
+  
+  <div id="message">
+    Van Baco's in de stad naar mijn favoriete valentijn 🥰
+  </div>
+
+  <script>
+    const heart = document.getElementById('heart');
+    const button = document.getElementById('showMessage');
+    const message = document.getElementById('message');
+
+    heart.addEventListener('click', () => {
+      message.style.display = 'block';
+    });
+
+    button.addEventListener('click', () => {
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
